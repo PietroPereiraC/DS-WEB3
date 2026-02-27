@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    background: #e8f5e9;
+    font-family: Arial;
+}
+
+.area {
+    margin: 20px auto;
+    width: 1000px;
+    height: 500px;
+    background: #66bb6a;
+    border: 3px solid #1b5e20;
+    position: relative;
+    overflow: hidden;
+}
+
+#gorila {
+    position: absolute;
+    font-size: 40px;
+    left: 130px;
+    top: 1px;
+}
+.arvore1,
+.arvore2,
+.arvore3,
+.arvore4,
+.arvore5,
+.arvore6,
+.arvore7 {
+    position: absolute;
+    font-size: 32px;
+}
+
+.mensagem,
+.posicao {
+    font-weight: bold;
+}
+
+.espacamento {
+    height: 500px;
+}
+
+#homem {
+    position: absolute;
+    font-size: 38px;
+    z-index: 2;
+    transition: left 0.07s linear, top 0.07s linear;
+}
