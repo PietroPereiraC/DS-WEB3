@@ -1,43 +1,32 @@
-let lista = [];
+let contadorItem = 0;
 
 function adicionar() {
+    contadorItem++;
+
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
     let rm = document.getElementById("rm").value;
     let telefone = document.getElementById("telefone").value;
     let turma = document.getElementById("turma").value;
-    
-    lista.push({
-        nome: nome,
-        email: email,
-        rm: rm,
-        telefone: telefone,
-        turma: turma
-    });
 
-    exibirLista();
+    let novoItem = document.createElement("li");
+    novoItem.setAttribute("id", contadorItem);
+
+    novoItem.innerHTML =
+        nome + "<br>" +
+        email + "<br>" +
+        rm + "<br>" +
+        telefone + "<br>" +
+        turma;
+
+    let botaoRemover = document.createElement("button");
+    botaoRemover.textContent = "Remover";
+    botaoRemover.setAttribute("onclick", "remover(" + contadorItem + ")");
+
+    novoItem.appendChild(botaoRemover);
+    document.getElementById("lista").appendChild(novoItem);
 }
 
-function exibirLista() {
-    let divLista = document.getElementById("lista");
-    divLista.innerHTML = "";
-
-    for (let i = 0; i < lista.length; i++) {
-        let aluno = lista[i];
-        divLista.innerHTML += `
-            <li>
-                Nome: ${aluno.nome} | 
-                Email: ${aluno.email} | 
-                RM: ${aluno.rm} | 
-                Telefone: ${aluno.telefone} | 
-                Turma: ${aluno.turma}
-                <button onclick="remover(${i})">Remover</button>
-            </li>
-        `;
-    }
-}
-
-function remover(index) {
-    lista.splice(index, 1);
-    exibirLista();
+function remover(id) {
+    document.getElementById(id).remove();
 }

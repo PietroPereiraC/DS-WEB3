@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #727a83;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 60px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.semaforo {
+    width: 120px;
+    height: 320px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 23px;
+    align-items: center;
+}
+
+.led {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+}
+
+.vermelho.ativo {
+    background-color: #ff4d4d;
+}
+
+.amarelo.ativo {
+    background-color: #ffeb3b;
+}
+
+.verde.ativo {
+    background-color: #4caf50;
+}
+
+.opcoes {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 160px;
+    height: 45px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #bdc3c7;
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 30px;
+        margin: 30px;
+    }
+
+    .semaforo {
+        width: 100px;
+        height: 270px;
+        padding: 15px;
+        gap: 17px;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    
+}
